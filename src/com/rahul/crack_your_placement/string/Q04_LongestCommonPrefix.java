@@ -1,6 +1,6 @@
 package com.rahul.crack_your_placement.string;
 
-public class Q03_LongestCommonPrefix {
+public class Q04_LongestCommonPrefix {
     static class Trie {
         Trie[] childs = new Trie[26];
         int count = 0;

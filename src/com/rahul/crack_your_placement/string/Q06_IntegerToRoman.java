@@ -1,6 +1,6 @@
 package com.rahul.crack_your_placement.string;
 
-public class Q05_IntegerToRoman {
+public class Q06_IntegerToRoman {
     public String intToRoman(int num) {
         StringBuilder sb = new StringBuilder();
 

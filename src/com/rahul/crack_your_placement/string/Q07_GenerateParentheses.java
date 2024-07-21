@@ -3,7 +3,7 @@ package com.rahul.crack_your_placement.string;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q06_GenerateParentheses {
+public class Q07_GenerateParentheses {
     void solve(int open, int close, StringBuilder sb, List<String> ans) {
         if(open == 0 && close == 0) {
             ans.add(sb.toString());

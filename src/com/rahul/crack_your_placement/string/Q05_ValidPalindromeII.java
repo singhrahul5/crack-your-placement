@@ -1,6 +1,6 @@
 package com.rahul.crack_your_placement.string;
 
-public class Q04_ValidPalindromeII {
+public class Q05_ValidPalindromeII {
     boolean isPalindrome(String s, int removedIndex) {
         int left = 0;
         int right = s.length() -1;
