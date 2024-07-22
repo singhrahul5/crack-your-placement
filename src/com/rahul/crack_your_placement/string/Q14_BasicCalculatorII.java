@@ -70,7 +70,7 @@ public class Q14_BasicCalculatorII {
                 long opr1 = stt.pop();
 
                 long ans = calc(opr1, opr2, str);
-                stt.push(ans);
+                stt.push(Long.valueOf(ans));
             } else
                 stt.push(Long.valueOf(str));
 
