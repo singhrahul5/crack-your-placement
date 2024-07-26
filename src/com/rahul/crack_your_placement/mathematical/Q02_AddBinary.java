@@ -10,25 +10,25 @@ public class Q02_AddBinary {
         bIdx = b.length() - 1;
 
         int carry = 0;
-        while(aIdx >= 0 && bIdx >= 0) {
+        while (aIdx >= 0 && bIdx >= 0) {
             int total = a.charAt(aIdx--) + b.charAt(bIdx--) + carry - 2 * '0';
             carry = total / 2;
-            ans.append(total%2);
+            ans.append(total % 2);
         }
 
-        while(aIdx >= 0 ) {
+        while (aIdx >= 0) {
             int total = a.charAt(aIdx--) + carry - '0';
             carry = total / 2;
-            ans.append(total%2);
+            ans.append(total % 2);
         }
 
-        while(bIdx >= 0) {
+        while (bIdx >= 0) {
             int total = b.charAt(bIdx--) + carry - '0';
             carry = total / 2;
-            ans.append(total%2);
+            ans.append(total % 2);
         }
 
-        if(carry == 1) ans.append(carry);
+        if (carry == 1) ans.append(carry);
         return ans.reverse().toString();
     }
 }

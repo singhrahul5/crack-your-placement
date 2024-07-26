@@ -7,18 +7,18 @@ public class Q03_FindPairGivenDifference {
         // code here
         Arrays.sort(arr);
 
-        for(int i = 0; i < n; i++) {
-            int left = i+1;
-            int right = n-1;
+        for (int i = 0; i < n; i++) {
+            int left = i + 1;
+            int right = n - 1;
 
             int target = x + arr[i];
 
-            while(left <= right) {
-                int mid = (left+right)/2;
+            while (left <= right) {
+                int mid = (left + right) / 2;
 
-                if(target > arr[mid]) {
+                if (target > arr[mid]) {
                     left = mid + 1;
-                } else if(target < arr[mid]) {
+                } else if (target < arr[mid]) {
                     right = mid - 1;
                 } else {
                     return 1;

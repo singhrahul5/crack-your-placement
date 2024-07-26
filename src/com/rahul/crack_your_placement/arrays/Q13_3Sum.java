@@ -9,9 +9,9 @@ public class Q13_3Sum {
         Set<List<Integer>> ans = new HashSet<>();
 
         for (int i = 0; i < nums.length; i++) {
-            for(int j = i+1; j < nums.length; j++) {
+            for (int j = i + 1; j < nums.length; j++) {
 
-                if(set.contains(-nums[i] - nums[j])) {
+                if (set.contains(-nums[i] - nums[j])) {
                     var list = Arrays.asList(nums[i], nums[j], -nums[i] - nums[j]);
                     list.sort(Comparator.naturalOrder());
                     ans.add(list);

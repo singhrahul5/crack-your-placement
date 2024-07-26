@@ -7,14 +7,14 @@ public class Q12_ContainerWithMostWater {
         right = height.length - 1;
         ans = 0;
 
-        while(left < right) {
-            area = Math.min(height[left] , height[right]) * (right - left);
+        while (left < right) {
+            area = Math.min(height[left], height[right]) * (right - left);
             ans = Math.max(ans, area);
 
-            if(height[left] < height[right])
-                left ++;
+            if (height[left] < height[right])
+                left++;
             else
-                right --;
+                right--;
         }
 
         return ans;

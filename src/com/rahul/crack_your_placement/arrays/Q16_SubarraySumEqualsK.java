@@ -1,6 +1,7 @@
 package com.rahul.crack_your_placement.arrays;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Q16_SubarraySumEqualsK {
     public int subarraySum(int[] nums, int k) {

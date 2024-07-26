@@ -7,11 +7,11 @@ public class Q10_SubarraySumsDivisibleByK {
 
         int rem = 0;
         int ans = 0;
-        for(int num:nums) {
+        for (int num : nums) {
             rem = Math.floorMod(num + rem, k);
 
             ans += prefixRem[rem];
-            prefixRem[rem] ++;
+            prefixRem[rem]++;
         }
         return ans;
     }

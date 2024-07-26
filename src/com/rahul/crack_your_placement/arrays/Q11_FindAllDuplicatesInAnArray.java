@@ -8,10 +8,10 @@ public class Q11_FindAllDuplicatesInAnArray {
 
         List<Integer> ans = new ArrayList<>();
 
-        for(int num: nums) {
+        for (int num : nums) {
             int index = Math.abs(num) - 1;
 
-            if(nums[index] < 0)
+            if (nums[index] < 0)
                 ans.add(index + 1);
 
             nums[index] *= -1;

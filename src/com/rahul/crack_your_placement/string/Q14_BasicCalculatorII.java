@@ -9,8 +9,9 @@ public class Q14_BasicCalculatorII {
         return op1.equals("/") && op2.equals("+")
                 || op1.equals("*") && op2.equals("+")
                 || op1.equals("/") && op2.equals("-")
-                || op1.equals("*") && op2.equals("-") ;
+                || op1.equals("*") && op2.equals("-");
     }
+
     boolean isOperator(String op) {
         return op.equals("/") || op.equals("-")
                 || op.equals("*") || op.equals("+");
@@ -30,24 +31,24 @@ public class Q14_BasicCalculatorII {
         int len = s.length();
         int index = 0;
         List<String> infix = new ArrayList<>();
-        while(index < len) {
+        while (index < len) {
             int start = index;
 
-            while(index < len && !String.valueOf(s.charAt(index)).matches("[+\\-*/]"))
-                index ++;
+            while (index < len && !String.valueOf(s.charAt(index)).matches("[+\\-*/]"))
+                index++;
 
             infix.add(s.substring(start, index));
-            if(index < len)
-                infix.add(s.substring(index, index+1));
+            if (index < len)
+                infix.add(s.substring(index, index + 1));
             index++;
         }
 
         Stack<String> stack = new Stack<>();
 
         List<String> postfix = new ArrayList<>();
-        for(String str: infix) {
-            if(isOperator(str)) {
-                while(!stack.empty() && !isGreater(str, stack.peek()))
+        for (String str : infix) {
+            if (isOperator(str)) {
+                while (!stack.empty() && !isGreater(str, stack.peek()))
                     postfix.add(stack.pop());
 
                 stack.push(str);
@@ -55,17 +56,15 @@ public class Q14_BasicCalculatorII {
                 postfix.add(str);
 
         }
-        while(!stack.isEmpty())
+        while (!stack.isEmpty())
             postfix.add(stack.pop());
-
-
 
 
         //evaluate
 
         Stack<Long> stt = new Stack<>();
-        for(String str: postfix) {
-            if(isOperator(str)) {
+        for (String str : postfix) {
+            if (isOperator(str)) {
                 long opr2 = stt.pop();
                 long opr1 = stt.pop();
 

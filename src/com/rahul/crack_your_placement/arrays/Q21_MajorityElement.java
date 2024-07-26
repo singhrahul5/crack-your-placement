@@ -5,11 +5,11 @@ public class Q21_MajorityElement {
         int ele = nums[0];
         int count = 1;
 
-        for(int i = 1; i < nums.length; i++) {
-            if(nums[i] == ele) {
-                count ++;
-            } else if(count > 0) {
-                count --;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == ele) {
+                count++;
+            } else if (count > 0) {
+                count--;
             } else {
                 ele = nums[i];
                 count = 1;

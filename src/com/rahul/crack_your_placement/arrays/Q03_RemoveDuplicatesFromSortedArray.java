@@ -5,11 +5,11 @@ public class Q03_RemoveDuplicatesFromSortedArray {
 
         int k = 0;
 
-        for(int i = 1; i < nums.length; i++) {
-            if(nums[i] != nums[k])
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[k])
                 nums[++k] = nums[i];
 
         }
-        return k+1;
+        return k + 1;
     }
 }

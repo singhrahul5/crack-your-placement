@@ -8,6 +8,7 @@ public class Q26_InsertDeleteGetRandomDuplicatesAllowed {
         Map<Integer, Set<Integer>> map;
         List<Integer> list;
         Random rnd;
+
         public RandomizedCollection() {
             map = new HashMap<>();
             list = new ArrayList<>();
@@ -24,7 +25,7 @@ public class Q26_InsertDeleteGetRandomDuplicatesAllowed {
         }
 
         public boolean remove(int val) {
-            if(map.containsKey(val)) {
+            if (map.containsKey(val)) {
                 Set<Integer> set = map.get(val);
 
                 int indexToRemove = set.iterator().next();
@@ -35,13 +36,11 @@ public class Q26_InsertDeleteGetRandomDuplicatesAllowed {
                 set.remove(indexToRemove);
 
 
-
-
                 var set2 = map.get(lastVal);
                 set2.add(indexToRemove);
                 set2.remove(lastIndex);
 
-                if(set.isEmpty())
+                if (set.isEmpty())
                     map.remove(val);
                 return true;
             }

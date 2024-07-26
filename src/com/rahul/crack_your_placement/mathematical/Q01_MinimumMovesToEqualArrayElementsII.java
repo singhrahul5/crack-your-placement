@@ -10,15 +10,15 @@ public class Q01_MinimumMovesToEqualArrayElementsII {
         int right = 0;
         int n = nums.length;
 
-        int mid = n/2;
-        for(int i = 0; i < n; i++) {
-            if(i < mid)
+        int mid = n / 2;
+        for (int i = 0; i < n; i++) {
+            if (i < mid)
                 left += nums[i];
             else
                 right += nums[i];
         }
 
-        return right - left - (n%2 == 1 ? nums[mid]: 0);
+        return right - left - (n % 2 == 1 ? nums[mid] : 0);
 
     }
 }

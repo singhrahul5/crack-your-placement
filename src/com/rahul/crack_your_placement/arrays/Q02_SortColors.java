@@ -6,18 +6,18 @@ public class Q02_SortColors {
         int zero = 0;
         int two = nums.length - 1;
         int index = 0;
-        while(index <= two) {
-            if(nums[index] == 0) {
+        while (index <= two) {
+            if (nums[index] == 0) {
                 nums[index] = nums[zero];
                 nums[zero] = 0;
                 zero++;
-                index ++;
+                index++;
             } else if (nums[index] == 2) {
                 nums[index] = nums[two];
                 nums[two] = 2;
-                two --;
+                two--;
             } else {
-                index ++;
+                index++;
             }
         }
     }

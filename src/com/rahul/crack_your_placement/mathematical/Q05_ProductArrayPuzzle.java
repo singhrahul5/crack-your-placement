@@ -10,7 +10,7 @@ public class Q05_ProductArrayPuzzle {
         long prefixMul = 1;
         long postfixMul = 1;
 
-        for(int i = 0, j = n-1; i < n && j >= 0; i++, j--) {
+        for (int i = 0, j = n - 1; i < n && j >= 0; i++, j--) {
             ans[i] *= prefixMul;
             prefixMul *= nums[i];
 

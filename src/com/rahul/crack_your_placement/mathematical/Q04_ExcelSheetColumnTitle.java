@@ -5,11 +5,11 @@ public class Q04_ExcelSheetColumnTitle {
 
         StringBuilder ans = new StringBuilder();
 
-        while(columnNumber > 0) {
-            columnNumber --;
-            int rem = columnNumber% 26;
+        while (columnNumber > 0) {
+            columnNumber--;
+            int rem = columnNumber % 26;
 
-            ans.append((char)('A' + rem));
+            ans.append((char) ('A' + rem));
             columnNumber /= 26;
         }
 
